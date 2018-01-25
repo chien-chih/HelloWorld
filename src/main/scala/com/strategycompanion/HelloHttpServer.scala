@@ -9,7 +9,7 @@ object HelloHttpServer extends HttpApp{
       path("id" / Segment) { id =>
         get {
           println("server get " + id)
-          complete(s"Hello World from akka")
+          complete(s"Hello World from akka v1")
         } ~
           post {
             entity(as[String]) { entity =>
